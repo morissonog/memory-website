@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory</title>
+  <link rel="stylesheet" href="style4.css"> 
+
+</head>
+<body>
+  <div id="background-container">
+  <video id="backgroundVideo" autoplay loop muted>
+    <source src="3333.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+  <header class="header">
+    <div class="container header__container">
+      <a class="logo">
+        <img src="222.png" alt="Memory Logo">
+      </a>
+      <button class="menu-button">
+        <img src="333.png" alt="Menu Icon">
+      </button>
+    </div>
+  </header>
+  
+  <main id="main-content">
+    <div id="content">
+      <section class="featured-section">
+        <img src="444.png" alt="photo1" class="featured-image">
+        <blockquote class="featured-quote">
+          <p>"Будь пацаном а не чушпаном.Я универсамовский ."</p>
+        </blockquote>
+      </section>
+      <section class="text-section">
+        <p>Леонов Алексей 
+          Родился 9 июня 1997 года в небольшом городке Ленинск-Кузнецкий.
+        </p>
+        <div class="slider">
+          <div class="slides">
+            <div class="slide"><img src="777.jpg" alt="Image 1"></div>
+            <div class="slide"><img src="6664.jpg" alt="Image 2"></div>
+            <div class="slide"><img src="photo1.JPG" alt="Image 3"></div>
+          </div>
+        </div>
+      </section>
+      <section class="additional-text-section">
+        <h2>Заголовок секции</h2>
+        <p>Этот текст описывает дополнительную информацию или предоставляет детали, которые могут быть полезны для посетителей сайта.</p>
+      </section>
+      <section class="additional-text-section1">
+        <h2>Заголовок секции</h2>
+        <p>Этот текст описывает дополнительную информацию или предоставляет детали, которые могут быть полезны для посетителей сайта.</p>
+      </section>
+    </div>
+  </main>
+
+  <!-- Переместим всплывающее меню сюда -->
+  <div id="popupMenu" class="popup-menu">
+    <button class="menu-button">
+      <img src="333.png" alt="Menu Icon">
+    </button>
+    <!-- Кнопка меню в поп-ап меню -->
+    <button class="menu-button popup-menu-button">
+      <img src="333.png" alt="Menu Icon">
+    </button>
+    <nav>
+      <ul>
+        <li><a href="#" data-file="main.html">Главная</a></li>
+        <li><a href="#" data-file="photohtml.html">Фотоальбом</a></li>
+        <li><a href="#" data-file="music.html">Музыка</a></li>
+        <li><a href="#" data-file="video.html">Видео</a></li>
+      </ul>
+      <a class="logo1">
+        <img src="2223.png" alt="Memory Logo">
+      </a>
+    </nav>
+  </div>
+
+  <script src="script.js"></script>
+  
+</body>
+</html>

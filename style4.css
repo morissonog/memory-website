@@ -1,0 +1,312 @@
+/* Общие стили */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%; 
+  box-sizing: border-box;
+  line-height: 1;
+  max-width: 667px;
+  float: right;
+}
+
+header {
+  width: 80%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0px;
+}
+
+main {
+  width: 100%; /* Полная ширина контейнера */
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Стили для разных частей основного контента */
+#main-content1 {
+  height: 2500px;
+}
+
+#main-content2 {
+  height: 400px;
+} 
+
+#main-content3 {
+  height: 700px;
+}
+
+#main-content4 {
+  height: 500px; /* Устанавливаем высоту для четвертого main */
+}
+
+.logo img {
+  height: 90px;
+  top: 40px; /* Смещение от верха */
+  left: 100px; 
+  animation: logo-scale 3s infinite ease-in-out;
+}
+
+.logo1 img {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 45px;
+}
+
+/* Кнопка меню */
+.menu-button {
+  background: none; /* Убирает стандартный фон кнопки */
+  border: none; /* Убирает стандартные рамки */
+  cursor: pointer; /* Курсор в виде руки для лучшей интерактивности */
+  padding: 10px; /* Небольшой отступ вокруг иконки для удобства клика */
+}
+
+.menu-button img {
+  position: absolute;
+  top: 5px; /* Прижимаем к верху контейнера */
+  right: 10px; /* Прижимаем к правой стороне контейнера */
+  display: block; /* Убирает лишние отступы под изображением */
+  width: 90px; /* Пример ширины, адаптируйте под ваш дизайн */
+  height: auto; /* Автоматически рассчитывает высоту, сохраняя пропорции */
+  cursor: pointer;
+}
+
+/* Основной текстовый блок */
+.text-section,
+.additional-text-section,
+.additional-text-section1 {
+  background-color: black; /* Черный фон */
+  border-radius: 15px; /* Закругленные углы */
+  padding: 20px; /* Внутренние отступы */
+  color: white; /* Белый текст для контраста */
+  margin: 20px; /* Отступ от других элементов */
+  font-size: 1.2em; /* Увеличенный размер текста для лучшей читаемости */
+}
+
+/* Изображения и цитаты в секции */
+.featured-section {
+  display: block; /* Используем блочное отображение для мобильных устройств */
+  padding: 20px;
+}
+
+.featured-image {
+  width: 80%; /* Полная ширина секции для мобильных устройств */
+  height: auto;
+  border-radius: 8px; /* Слегка закругленные углы для эстетики */
+  display: block; /* Убедитесь, что изображение отображается как блок */
+  margin-bottom: 20px; /* Отступ снизу до текста */
+}
+
+.featured-quote {
+  font-style: italic;
+  margin: 0; /* Убираем боковые отступы для мобильных устройств */
+  text-align: center; /* Центрируем текст для мобильных устройств */
+  font-size: 1.5em;
+  color: white;
+}
+
+.featured-quote cite {
+  display: block;
+  text-align: center; /* Центрируем подпись на мобильных */
+  font-style: normal;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Медиа-запросы */
+@media (max-width: 768px) {
+  .featured-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .logo {
+      position: relative; /* или `absolute`, в зависимости от желаемого эффекта */
+      top: 5px;
+      left: 10px;
+  }
+}
+
+/* Видеофон */
+#backgroundVideo {
+  position: fixed;
+  left: 50%; /* Центрируем видео по горизонтали */
+  top: 50%; /* Центрируем видео по вертикали */
+  transform: translate(-50%, -50%); /* Перемещаем видео обратно на половину его размера, чтобы оно было центрировано по центру экрана */
+  min-width: 100%; /* Минимальная ширина 100% экрана */
+  min-height: 100%; /* Минимальная высота 100% экрана */
+  width: auto; /* Ширина будет автоматически подстраиваться, чтобы сохранить пропорции */
+  height: auto; /* Высота будет автоматически подстраиваться, чтобы сохранить пропорции */
+  object-fit: cover; /* Масштабировать видео так, чтобы оно заполнило контейнер, сохраняя пропорции */
+  object-position: center; /* Позиционировать видео по центру контейнера */
+}
+
+#background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+#slider {
+  position: fixed;
+  bottom: 0;
+  left: 200px;
+  transform: translateX(-50%);
+  /* Стили для ползунка */
+}
+
+#mainContent {
+  position: relative; /* Обязательно для позиционирования видео */
+  width: 200%; /* Ширина на весь экран */
+  height: 100vh; /* Высота на весь экран */
+  overflow: hidden; /* Чтобы видео не выходило за границы main */
+}
+
+/* Анимации */
+@keyframes logo-scale {
+  0%, 100% {
+      transform: scale(1); /* Исходный размер */
+  }
+  50% {
+      transform: scale(0.8); /* Уменьшение до 50% */
+  }
+}
+
+@keyframes tilt-animation {
+  0%, 100% {
+      transform: rotate(0deg); /* Начало и конец анимации в исходном положении */
+  }
+  20% {
+      transform: rotate(-3deg); /* Наклон влево */
+  }
+  50% {
+      transform: rotate(3deg); /* Наклон вправо */
+  }
+  80% {
+      transform: rotate(0deg); /* Возвращение в исходное положение */
+  }
+}
+
+/* Всплывающее меню */
+.popup-menu {
+  position: fixed;
+  top: 0;
+  right: -250px; /* Начальное положение за экраном */
+  width: 250px;
+  height: 100%;
+  background-color: rgba(29, 29, 29, 0.8);
+  color: #fff;
+  transition: right 0.5s ease;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.popup-menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.popup-menu li {
+  margin: 20px 0;
+}
+
+.popup-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-family: "Colibri", sans-serif;
+}
+
+.popup-menu.open {
+  right: 0; /* Положение меню, когда оно открыто */
+}
+
+/* Плеер */
+#audio-player {
+  margin-top: 20px;
+}
+
+#audio-player audio {
+  width: 100%;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  background-color: #000000;
+}
+
+#audio-player audio::-webkit-media-controls-panel {
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+#audio-player audio::-webkit-media-controls-play-button {
+  background-color: #007bff;
+}
+
+#audio-player audio::-webkit-media-controls-play-button:hover {
+  background-color: #0056b3;
+}
+
+#audio-player audio::-webkit-media-controls-timeline {
+  background-color: #ddd;
+}
+
+#audio-player audio::-webkit-media-controls-timeline::-webkit-media-slider-thumb {
+  background-color: #007bff;
+}
+
+#audio-player audio::-webkit-media-controls-current-time-display,
+#audio-player audio::-webkit-media-controls-time-remaining-display {
+  color: #333;
+  font-size: 14px;
+}
+
+* Основной стиль для photo-container */
+.photo-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Три колонки одинаковой ширины */
+  grid-auto-rows: 1fr; /* Высота строк автоматически подстраивается под ширину, чтобы поддерживать квадратную форму */
+  gap: 0; /* Убираем расстояние между миниатюрами */
+  width: 100%; /* Контейнер занимает всю доступную ширину */
+  margin: 0 auto; /* Центрируем контейнер по горизонтали */
+}
+
+/* Стиль для каждого блока с изображением */
+.photo-container div {
+  position: relative;
+  overflow: hidden;
+  background-color: black; /* Фон для блоков с изображениями, если нужно */
+}
+
+/* Стиль для изображений внутри контейнера */
+.photo-container img {
+  width: 100%; /* Ширина изображения равна ширине блока */
+  height: 100%; /* Высота изображения равна высоте блока */
+  object-fit: cover; /* Изображение будет покрывать весь блок */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Плавный переход для эффекта при наведении */
+}
+
+/* Эффект при наведении на изображение */
+.photo-container img:hover {
+  transform: scale(1.05); /* Увеличиваем изображение при наведении */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Добавляем тень для эффекта */
+}
+
+
+
+  
